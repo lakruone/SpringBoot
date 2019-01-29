@@ -2,6 +2,7 @@ package com.itamp.Service.ServiceImpl;
 
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -59,7 +60,23 @@ public class ChildServiceImpl implements ChildService {
 	   }
 	   
 	}
-	
+	/*@Override
+	public String hin(String regId,Date dateOfBirth) {
+		/*String AB="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		Random random=new Random();
+		StringBuilder sb=new StringBuilder(10);
+		for(int i=0;i<10;i++) {
+			sb.append();
+		}
+		return sb.toString();
+		
+		return dob+reg+"1233asdf";
+	}*/
+	@Override
+	public String hin(String regId, java.sql.Date dob) {
+		
+		return regId+dob;
+	}
 	
 	
 }

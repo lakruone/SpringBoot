@@ -3,6 +3,7 @@ package com.itamp.ItampController;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,7 @@ import com.itamp.Service.LocationService;
 import com.itamp.Service.UserService;
 
 @RestController
+@CrossOrigin(origins="http://localhost:4200", allowedHeaders="*")
 public class ItampController {
 	
 	@Autowired
@@ -125,4 +127,6 @@ public class ItampController {
      private List<GN> gnAreaInOnePhm(@PathVariable String name){
     	 return locationService.gnAreaInOnePhm(name);
      }
+     
+    
      } 

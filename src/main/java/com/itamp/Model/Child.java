@@ -5,11 +5,17 @@ import java.sql.Time;
 
 import javax.persistence.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.itamp.Service.ChildService;
+
 
 
 @Entity
 @Table(name="child")
 public class Child {
+	@Autowired
+	private ChildService childService;
     @Id 
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="childId", insertable=false, updatable=false)
@@ -147,7 +153,8 @@ public class Child {
 	}
 
 	public void setHin(String hin) {
-		this.hin = hin;
+		String hin1=childService.hin(registrationId,dateOfBirth);
+		this.hin = hin1;
 	}
 
 	public Long getChildId() {
@@ -198,6 +205,8 @@ public class Child {
 		this.currentAddress = currentAddress;
 	}
 
+	
+
 	/*public VaccineProfile getVaccineProfile() {
 		return vaccineProfile;
 	}
@@ -208,5 +217,13 @@ public class Child {
 
     
 	*/
+	@Override
+	public String toString() {
+		return "Child [childId=" + childId + ", registrationId=" + registrationId + ", registrationDate="
+				+ registrationDate + ", fullName=" + fullName + ", hin=" + hin + ", dateOfBirth=" + dateOfBirth
+				+ ", timeOfBirth=" + timeOfBirth + ", gender=" + gender + ", birthWeight=" + birthWeight
+				+ ", placeOfBirth=" + placeOfBirth + ", parent=" + parent + ", area=" + area + ", hospital=" + hospital
+				+ ", currentAddress=" + currentAddress + ", guardian=" + guardian + "]";
+	}
 	
 }
