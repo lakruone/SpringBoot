@@ -14,7 +14,7 @@ public interface ChildService {
 
 	void update(Child ch);
 
-	String delete(String id);
+	void delete(String registrationId);
 	
 	
 

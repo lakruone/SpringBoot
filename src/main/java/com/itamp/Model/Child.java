@@ -54,6 +54,10 @@ public class Child {
    @JoinColumn(name="guardianId")
    private Guardian guardian;
    
+  /* @OneToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+   @JoinColumn(name="profileId",referencedColumnName="profileId", nullable=false)
+   private VaccineProfile vaccineProfile;*/
+   
   
 	
     public Child(){}
@@ -194,7 +198,15 @@ public class Child {
 		this.currentAddress = currentAddress;
 	}
 
+	/*public VaccineProfile getVaccineProfile() {
+		return vaccineProfile;
+	}
+
+	public void setVaccineProfile(VaccineProfile vaccineProfile) {
+		this.vaccineProfile = vaccineProfile;
+	}
+
     
-	
+	*/
 	
 }

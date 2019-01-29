@@ -7,10 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-
-
-
 @Entity
 @Table(name="additionalinfo")
 public class MotherAdditionalInformation{
