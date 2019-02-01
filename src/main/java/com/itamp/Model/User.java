@@ -23,7 +23,7 @@ public class User {
 	private String password;
 	@Column(name="contactno")
 	private String contactNo;
-	@Column(name="email")
+	@Column(name="email", unique=true)
 	private String email;
 	
 	@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
@@ -58,7 +58,9 @@ public class User {
 	}
 
 	public void setUsername(String username) {
-		this.username = username;
+	
+		this.username=username;
+	
 	}
 
 	public String getFirstname() {

@@ -2,6 +2,7 @@ package com.itamp.Model;
 
 import java.sql.Date;
 import java.sql.Time;
+import java.util.Random;
 
 import javax.persistence.*;
 
@@ -14,8 +15,7 @@ import com.itamp.Service.ChildService;
 @Entity
 @Table(name="child")
 public class Child {
-	@Autowired
-	private ChildService childService;
+	
     @Id 
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="childId", insertable=false, updatable=false)
@@ -153,8 +153,13 @@ public class Child {
 	}
 
 	public void setHin(String hin) {
-		String hin1=childService.hin(registrationId,dateOfBirth);
-		this.hin = hin1;
+		String AB="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		Random random=new Random();
+		StringBuilder sb=new StringBuilder(10);
+		for(int i=0;i<10;i++) {
+			sb.append(AB.charAt(random.nextInt(AB.length())));
+		}
+		this.hin=sb.toString();
 	}
 
 	public Long getChildId() {

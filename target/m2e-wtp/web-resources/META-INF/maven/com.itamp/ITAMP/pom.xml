@@ -39,11 +39,7 @@
       <scope>provided</scope>
     </dependency>
     
-    <!-- spring secuirity -->
-      <dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-security</artifactId>
-	</dependency>
+  
 	<!-- lambok notation -->
 	 <dependency>
             <groupId>org.projectlombok</groupId>
