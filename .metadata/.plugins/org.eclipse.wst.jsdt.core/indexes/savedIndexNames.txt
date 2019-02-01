@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+E:\New folder\ITAMP\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1646127581.index
-3789374816.index
-2229685417.index
-3467443006.index
-2911369099.index
-3447398918.index

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.web.servlet.server.ServletWebServerFactory"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory"/>
-    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.EnableAutoConfiguration"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
-</qualifiedTypeNameHistroy>
